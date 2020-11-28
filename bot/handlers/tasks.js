@@ -18,9 +18,7 @@ const tasksHandler = (ctx) => {
     `\n\n_⚠️  E para que você nunca se esqueça: faltam apenas _*${momentCalculations.weeksLeft()} semanas*_ para Miami!_`
   );
 
-  ctx
-    .reply(message.join(""), Extra.markdown())
-    .then(() => mainMenu.replyToContext(ctx));
+  ctx.reply(message.join(""), Extra.markdown());
 };
 
 module.exports = tasksHandler;
